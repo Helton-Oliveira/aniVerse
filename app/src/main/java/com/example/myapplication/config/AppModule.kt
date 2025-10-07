@@ -1,6 +1,7 @@
-package com.example.myapplication.ui.theme.config
+package com.example.myapplication.config
 
 
+import com.example.myapplication.shared.entityModules
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -25,4 +26,4 @@ val networkModule = module {
     }
 }
 
-val appModules = listOf(networkModule)
+val appModules = listOf(entityModules, networkModule)

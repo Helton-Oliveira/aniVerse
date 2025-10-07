@@ -2,11 +2,10 @@ package com.example.myapplication
 
 import android.app.Application
 import android.util.Log
-import com.example.myapplication.ui.theme.config.appModules
+import com.example.myapplication.config.appModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
-import org.koin.dsl.module
 
 class OtakuVerseApplication : Application() {
 
@@ -16,7 +15,8 @@ class OtakuVerseApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@OtakuVerseApplication)
-            module { appModules }
+            modules(appModules)
         }
     }
+
 }
